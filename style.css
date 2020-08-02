@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: rgb(88, 88, 88);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad,
+.clap-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: rgb(84, 93, 221);
+}
+.kick-pad.active {
+  background: rgb(3, 19, 243);
+  border: 0.1rem solid black;
+}
+
+.snare-pad {
+  background: rgb(119, 228, 109);
+}
+.snare-pad.active {
+  background: rgb(14, 139, 3);
+  border: 0.1rem solid black;
+}
+
+.hihat-pad {
+  background: rgb(235, 109, 218);
+}
+.hihat-pad.active {
+  background: rgb(114, 3, 99);
+  border: 0.1rem solid black;
+}
+
+.clap-pad {
+  background: rgb(235, 145, 109);
+}
+.clap-pad.active {
+  background: rgb(114, 38, 3);
+  border: 0.1rem solid black;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track,
+.clap-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.kick,
+.snare,
+.hihat,
+.clap {
+  display: flex;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.mute.active {
+  background: rgb(204, 204, 204);
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: rgb(88, 88, 88);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
